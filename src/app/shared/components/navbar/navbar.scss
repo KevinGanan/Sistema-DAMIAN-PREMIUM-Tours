@@ -20,6 +20,14 @@
 
 .navbar-container {
 
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
   display: flex;
 
   justify-content: space-between;
@@ -30,24 +38,19 @@
 
   position: relative;
 
-  width: 100%;
-
 }
 
 /*==========================
           LOGO
 ==========================*/
 
-.logo {
+.logo{
 
-  height: 80px;
+    height:70px;
 
-  width: auto;
+    width:auto;
 
-  max-width: 180px;
-
-  flex-shrink: 0;
-
+    flex-shrink:0;
 }
 
 /*==========================
@@ -176,6 +179,12 @@
 
 @media (max-width: 991px) {
 
+  .navbar-container {
+
+    padding: 0 16px;
+
+  }
+
   .menu-toggle {
 
     display: block;
@@ -266,16 +275,9 @@
 
 @media (max-width: 576px) {
 
-  .logo {
+  .logo{
 
-    height: 65px;
-
-    width: auto;
-
-    max-width: 150px;
-
-    flex-shrink: 0;
-
+    height:55px;
   }
 
   .navbar-container {
