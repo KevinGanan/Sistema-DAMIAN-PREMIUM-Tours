@@ -30,6 +30,8 @@
 
   position: relative;
 
+  width: 100%;
+
 }
 
 /*==========================
@@ -39,6 +41,12 @@
 .logo {
 
   height: 80px;
+
+  width: auto;
+
+  max-width: 180px;
+
+  flex-shrink: 0;
 
 }
 
@@ -188,7 +196,9 @@
 
     left: 0;
 
-    width: 100%;
+    right: 0;
+
+    width: auto;
 
     background: rgba(5, 47, 97, .98);
 
@@ -260,17 +270,31 @@
 
     height: 65px;
 
+    width: auto;
+
+    max-width: 150px;
+
+    flex-shrink: 0;
+
   }
 
   .navbar-container {
 
     height: 70px;
 
+    width: 100%;
+
   }
 
   .menu {
 
     top: 70px;
+
+    left: 0;
+
+    right: 0;
+
+    width: auto;
 
   }
 
