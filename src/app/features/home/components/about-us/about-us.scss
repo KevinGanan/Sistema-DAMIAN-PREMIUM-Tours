@@ -535,37 +535,7 @@ grid-template-columns:1fr;
 ==================================*/
 
 .floating-card{
-
-  position:absolute;
-
-  bottom:25px;
-
-  right:-25px;
-
-  display:flex;
-
-  align-items:center;
-
-  gap:18px;
-
-  padding:18px 22px;
-
-  border-radius:20px;
-
-  background:
-
-  rgba(255,255,255,.92);
-
-  backdrop-filter:blur(12px);
-
-  box-shadow:
-
-  0 20px 45px rgba(5,62,122,.18);
-
-  animation:
-
-  floatingCard 4s ease-in-out infinite;
-
+  right: 0;
 }
 
 .floating-icon{
@@ -652,4 +622,9 @@ margin-top:20px;
 
 }
 
+}
+
+.image-box,
+.about-content{
+  min-width: 0;
 }
