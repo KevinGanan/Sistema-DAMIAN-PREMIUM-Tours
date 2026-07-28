@@ -1,0 +1,537 @@
+<section id="tarifas" class="pricing-section">
+
+  <div class="container">
+
+
+    <div
+      class="section-header"
+      data-aos="fade-up">
+
+
+      <span>NUESTRAS TARIFAS</span>
+
+
+      <h2>
+        Viaja con precios claros y sin sorpresas
+      </h2>
+
+
+      <p>
+        Conoce nuestras rutas, tarifas y servicios de transporte.
+      </p>
+
+
+    </div>
+
+
+
+    <!-- VIAJES COMPARTIDOS -->
+
+    <div class="category">
+
+
+      <div class="category-title">
+
+        <h3>
+
+          <i class="fas fa-route"></i>
+
+          Viajes Compartidos
+
+        </h3>
+
+      </div>
+
+
+
+      <div class="cards-slider">
+
+
+        @for(item of sharedTrips; track item.route){
+
+
+          <div
+            class="price-card clickable"
+            data-aos="zoom-in"
+            (click)="consultarWhatsapp(
+              'Viaje Compartido',
+              item.route,
+              item.price
+            )">
+
+
+            <div class="card-icon">
+
+              <i class="fas fa-map-marker-alt"></i>
+
+            </div>
+
+
+            <h4>
+              {{item.route}}
+            </h4>
+
+
+            <div class="price">
+
+              {{item.price}}
+
+            </div>
+
+
+            <p>
+
+              {{item.description}}
+
+            </p>
+
+
+            <span class="whatsapp-action">
+
+              <i class="fab fa-whatsapp"></i>
+
+              Consultar disponibilidad
+
+            </span>
+
+
+          </div>
+
+
+        }
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- ENCOMIENDAS -->
+
+
+    <div class="category">
+
+
+      <div class="category-title">
+
+
+        <h3>
+
+          <i class="fas fa-box"></i>
+
+          Encomiendas
+
+        </h3>
+
+
+      </div>
+
+
+
+
+      <div class="cards-slider">
+
+
+        @for(item of parcels; track item.route){
+
+
+          <div
+            class="price-card clickable"
+            data-aos="zoom-in"
+            (click)="consultarWhatsapp(
+              'Encomienda',
+              item.route,
+              item.price
+            )">
+
+
+            <div class="card-icon">
+
+
+              <i class="fas fa-box"></i>
+
+
+            </div>
+
+
+
+            <h4>
+
+              {{item.route}}
+
+            </h4>
+
+
+
+            <div class="price">
+
+              {{item.price}}
+
+            </div>
+
+
+
+            <p>
+
+              Entrega rápida
+
+            </p>
+
+
+
+            <span class="whatsapp-action">
+
+
+              <i class="fab fa-whatsapp"></i>
+
+
+              Consultar disponibilidad
+
+
+            </span>
+
+
+
+          </div>
+
+
+
+        }
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- TRANSFERS -->
+
+
+    <div class="category">
+
+
+      <div class="category-title">
+
+
+        <h3>
+
+
+          <i class="fas fa-plane"></i>
+
+
+          Transfers Aeropuerto
+
+
+        </h3>
+
+
+      </div>
+
+
+
+
+      <div class="cards-slider">
+
+
+        @for(item of transfers; track item.route){
+
+
+
+          <div
+
+            class="price-card clickable"
+
+            data-aos="zoom-in"
+
+            (click)="consultarWhatsapp(
+
+              'Transfer',
+
+              item.route,
+
+              item.price
+
+            )">
+
+
+
+            <div class="card-icon">
+
+
+              <i class="fas fa-plane"></i>
+
+
+            </div>
+
+
+
+
+            <h4>
+
+
+              {{item.route}}
+
+
+            </h4>
+
+
+
+
+            <div class="price">
+
+
+              {{item.price}}
+
+
+            </div>
+
+
+
+
+            <p>
+
+
+              Servicio Ejecutivo
+
+
+            </p>
+
+
+
+
+            <span class="whatsapp-action">
+
+
+              <i class="fab fa-whatsapp"></i>
+
+
+              Consultar disponibilidad
+
+
+            </span>
+
+
+
+
+          </div>
+
+
+
+        }
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- VIAJES PRIVADOS / EXPRESS -->
+
+
+    <div class="category">
+
+
+      <div class="category-title">
+
+
+        <h3>
+
+
+          <i class="fas fa-car-side"></i>
+
+
+          Viajes Privados / Express
+
+
+        </h3>
+
+
+      </div>
+
+
+
+
+
+      <div class="cards-slider">
+
+
+        @for(item of express; track item.route){
+
+
+
+          <div
+
+            class="price-card clickable"
+
+            data-aos="zoom-in"
+
+            (click)="consultarWhatsapp(
+
+              'Viaje Privado',
+
+              item.route,
+
+              item.price
+
+            )">
+
+
+
+            <div class="card-icon">
+
+
+              <i class="fas fa-car-side"></i>
+
+
+            </div>
+
+
+
+
+            <h4>
+
+
+              {{item.route}}
+
+
+            </h4>
+
+
+
+
+            <div class="price">
+
+
+              {{item.price}}
+
+
+            </div>
+
+
+
+
+            <p>
+
+
+              Puerta a puerta
+
+
+            </p>
+
+
+
+
+            <span class="whatsapp-action">
+
+
+              <i class="fab fa-whatsapp"></i>
+
+
+              Consultar disponibilidad
+
+
+            </span>
+
+
+
+
+          </div>
+
+
+
+        }
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- INFORMACIÓN -->
+
+
+    <div class="pricing-info">
+
+
+
+      <div class="info-card">
+
+
+        <i class="fas fa-circle-info"></i>
+
+
+
+        <p>
+
+
+          Para viajes desde el <b>Sur y Valles de Quito</b>
+
+          la tarifa compartida es de <b>$20</b>.
+
+
+
+        </p>
+
+
+      </div>
+
+
+
+
+
+      <div class="info-card">
+
+
+        <i class="fas fa-box-open"></i>
+
+
+
+        <p>
+
+
+          Las encomiendas varían según el tamaño y peso.
+
+          También ofrecemos servicio privado.
+
+
+
+        </p>
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+</section>

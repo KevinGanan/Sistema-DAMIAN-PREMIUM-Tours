@@ -1,0 +1,230 @@
+<section
+  id="galeria"
+  class="gallery-section">
+
+  <div class="container">
+
+    <div
+      class="section-header"
+      data-aos="fade-up">
+
+      <span>📸 Galería</span>
+
+      <h2>
+        Conoce nuestros servicios y experiencias
+      </h2>
+
+      <p>
+        Descubre algunos de nuestros viajes,
+        promociones y servicios de transporte.
+      </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+      <!-- Imagen 1 -->
+      <div
+        class="gallery-item"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+        (click)="openImage('Publicidad 1.png')">
+
+        <img
+          src="assets/images/gallery/Publicidad 1.png"
+          alt="Publicidad">
+
+        <div class="gallery-overlay">
+
+          <i class="fa-solid fa-image"></i>
+
+          <span>Ver imagen</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Imagen 2 -->
+      <div
+        class="gallery-item"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        (click)="openImage('Publicidad 2.png')">
+
+        <img
+          src="assets/images/gallery/Publicidad 2.png"
+          alt="Publicidad">
+
+        <div class="gallery-overlay">
+
+          <i class="fa-solid fa-image"></i>
+
+          <span>Ver imagen</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Imagen 3 -->
+      <div
+        class="gallery-item"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+        (click)="openImage('Publicidad 3.png')">
+
+        <img
+          src="assets/images/gallery/Publicidad 3.png"
+          alt="Publicidad">
+
+        <div class="gallery-overlay">
+
+          <i class="fa-solid fa-image"></i>
+
+          <span>Ver imagen</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Imagen 4 -->
+      <div
+        class="gallery-item"
+        data-aos="zoom-in"
+        data-aos-delay="400"
+        (click)="openImage('Publicidad 4.png')">
+
+        <img
+          src="assets/images/gallery/Publicidad 4.png"
+          alt="Publicidad">
+
+        <div class="gallery-overlay">
+
+          <i class="fa-solid fa-image"></i>
+
+          <span>Ver imagen</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Imagen 5 -->
+      <div
+        class="gallery-item"
+        data-aos="zoom-in"
+        data-aos-delay="500"
+        (click)="openImage('Publicidad 5.png')">
+
+        <img
+          src="assets/images/gallery/Publicidad 5.png"
+          alt="Publicidad">
+
+        <div class="gallery-overlay">
+
+          <i class="fa-solid fa-image"></i>
+
+          <span>Ver imagen</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Imagen 6 -->
+      <div
+        class="gallery-item"
+        data-aos="zoom-in"
+        data-aos-delay="600"
+        (click)="openImage('Publicidad 6.png')">
+
+        <img
+          src="assets/images/gallery/Publicidad 6.png"
+          alt="Publicidad">
+
+        <div class="gallery-overlay">
+
+          <i class="fa-solid fa-image"></i>
+
+          <span>Ver imagen</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div
+      class="gallery-footer"
+      data-aos="fade-up">
+
+      <div class="gallery-info">
+
+        ⭐⭐⭐⭐⭐
+
+        <strong>
+          Servicio Premium
+        </strong>
+
+        <p>
+          Viajes seguros, clientes satisfechos y experiencias únicas.
+        </p>
+
+      </div>
+
+
+      <div class="gallery-button">
+
+        <a routerLink="/galeria">
+
+          <i class="fa-solid fa-images"></i>
+
+          Explorar galería completa
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- MODAL DE IMAGEN -->
+<!-- ========================= -->
+
+@if(selectedImage){
+
+<div
+class="image-modal"
+(click)="closeImage()">
+
+    <span
+    class="close-button"
+    (click)="closeImage(); $event.stopPropagation()">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </span>
+
+    <div
+    class="modal-content"
+    (click)="$event.stopPropagation()">
+
+        <img
+        [src]="'assets/images/gallery/' + selectedImage"
+        [alt]="selectedImage">
+
+    </div>
+
+</div>
+
+}

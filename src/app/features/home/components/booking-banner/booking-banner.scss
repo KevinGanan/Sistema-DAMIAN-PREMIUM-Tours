@@ -1,0 +1,153 @@
+.booking-banner{
+
+  position:relative;
+
+  min-height:420px;
+
+  background-image:
+  url('/assets/images/banner/reserva-bg.png');
+
+  background-size:cover;
+
+  background-position:center;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+
+.overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  rgba(0,0,0,.65);
+
+}
+
+
+
+.content{
+
+  position:relative;
+
+  z-index:1;
+
+  text-align:center;
+
+  color:white;
+
+  max-width:750px;
+
+  padding:20px;
+
+
+  span{
+
+    color:#ffd700;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+  }
+
+
+  h2{
+
+    font-size:42px;
+
+    margin:20px 0;
+
+  }
+
+
+  p{
+
+    font-size:18px;
+
+    line-height:1.6;
+
+  }
+
+}
+
+
+
+.btn-whatsapp{
+
+  margin-top:30px;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  padding:15px 35px;
+
+  background:#25D366;
+
+  color:white;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  transition:.3s;
+
+
+  i{
+
+    font-size:28px;
+
+  }
+
+
+  &:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+  }
+
+}
+
+
+
+@media(max-width:768px){
+
+  .booking-banner{
+
+    min-height:380px;
+
+  }
+
+
+  .content h2{
+
+    font-size:30px;
+
+  }
+
+
+  .content p{
+
+    font-size:16px;
+
+  }
+
+}

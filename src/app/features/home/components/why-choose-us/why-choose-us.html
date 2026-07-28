@@ -1,0 +1,118 @@
+<section class="why-section">
+
+  <div class="container">
+
+    <!-- Encabezado -->
+
+    <div
+      class="section-header"
+      data-aos="fade-up">
+
+      <span>
+        ⭐ ¿POR QUÉ ELEGIRNOS?
+      </span>
+
+      <h2>
+        Tu viaje seguro comienza con nosotros
+      </h2>
+
+      <p>
+        En <strong>DAMIAN PREMIUM Tours</strong> nos comprometemos a brindar
+        un servicio de transporte ejecutivo caracterizado por la seguridad,
+        puntualidad, comodidad y una atención personalizada en cada recorrido.
+      </p>
+
+    </div>
+
+
+    <!-- Tarjetas -->
+
+    <div class="cards">
+
+      @for (item of reasons; track item.title; let i = $index) {
+
+        <div
+          class="card"
+          data-aos="zoom-in-up"
+          [attr.data-aos-delay]="i * 100">
+
+          <div class="icon">
+
+            <i [class]="item.icon"></i>
+
+          </div>
+
+          <h3>
+
+            {{ item.title }}
+
+          </h3>
+
+          <p>
+
+            {{ item.description }}
+
+          </p>
+
+        </div>
+
+      }
+
+    </div>
+
+
+    <!-- Estadísticas -->
+
+    <div
+      class="stats"
+      data-aos="fade-up"
+      data-aos-delay="300">
+
+      <div class="stat">
+
+        <h3>24/7</h3>
+
+        <p>
+          Atención por WhatsApp
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>100%</h3>
+
+        <p>
+          Compromiso y responsabilidad
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>+5</h3>
+
+        <p>
+          Rutas principales disponibles
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>★★★★★</h3>
+
+        <p>
+          Calidad en cada viaje
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

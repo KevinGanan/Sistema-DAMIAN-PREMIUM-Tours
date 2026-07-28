@@ -1,0 +1,277 @@
+.navbar-custom {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  z-index: 999;
+
+  background: rgba(5, 47, 97, .90);
+
+  backdrop-filter: blur(10px);
+
+  transition: .3s;
+
+}
+
+.navbar-container {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  height: 80px;
+
+  position: relative;
+
+}
+
+/*==========================
+          LOGO
+==========================*/
+
+.logo {
+
+  height: 80px;
+
+}
+
+/*==========================
+      BOTÓN HAMBURGUESA
+==========================*/
+
+.menu-toggle {
+
+  display: none;
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  z-index: 1001;
+
+}
+
+/*==========================
+          MENÚ
+==========================*/
+
+.menu {
+
+  display: flex;
+
+  align-items: center;
+
+  list-style: none;
+
+  gap: 35px;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+.menu a {
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: .3s;
+
+}
+
+.menu a:hover {
+
+  color: #d6a23c;
+
+}
+
+/*==========================
+        WHATSAPP
+==========================*/
+
+.btn-whatsapp {
+
+  background: #25D366;
+
+  color: white !important;
+
+  padding: 12px 22px;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  transition: .3s;
+
+  text-decoration: none;
+
+}
+
+.btn-whatsapp:hover {
+
+  background: #1ebe5d;
+
+  transform: translateY(-3px);
+
+}
+
+.whatsapp-icon {
+
+  color: white;
+
+  font-size: 22px;
+
+  transition: .3s;
+
+}
+
+.btn-whatsapp:hover .whatsapp-icon {
+
+  transform: scale(1.15);
+
+}
+
+.mobile-whatsapp {
+
+  display: none;
+
+}
+
+/*==========================
+        RESPONSIVE
+==========================*/
+
+@media (max-width: 991px) {
+
+  .menu-toggle {
+
+    display: block;
+
+  }
+
+  .desktop-whatsapp {
+
+    display: none;
+
+  }
+
+  .menu {
+
+    position: absolute;
+
+    top: 80px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(5, 47, 97, .98);
+
+    backdrop-filter: blur(12px);
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .35s ease;
+
+    border-radius: 0 0 20px 20px;
+
+  }
+
+  .menu.active {
+
+    max-height: 700px;
+
+    padding: 20px 0;
+
+  }
+
+  .menu li {
+
+    width: 100%;
+
+    text-align: center;
+
+  }
+
+  .menu li a {
+
+    display: block;
+
+    padding: 16px;
+
+    font-size: 17px;
+
+  }
+
+  .mobile-whatsapp {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 20px;
+
+  }
+
+  .mobile-whatsapp .btn-whatsapp {
+
+    width: 100%;
+
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .logo {
+
+    height: 65px;
+
+  }
+
+  .navbar-container {
+
+    height: 70px;
+
+  }
+
+  .menu {
+
+    top: 70px;
+
+  }
+
+}

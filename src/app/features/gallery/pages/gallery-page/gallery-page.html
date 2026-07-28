@@ -1,0 +1,293 @@
+<section class="gallery-page">
+
+  <div class="container">
+
+    <!-- Encabezado -->
+    <div
+      class="section-header"
+      data-aos="fade-up">
+
+      <span class="section-badge">
+
+        <i class="fa-solid fa-camera-retro"></i>
+
+        Galería Premium
+
+      </span>
+
+      <h1>
+        Descubre DAMIAN PREMIUM Tours
+      </h1>
+
+      <p>
+        Explora nuestras promociones, vehículos, servicios y momentos que
+        reflejan la calidad y confianza que ofrecemos en cada viaje.
+      </p>
+
+    </div>
+
+    <!-- ===========================
+            GALERÍA
+    ============================ -->
+
+    <div class="gallery-grid">
+
+      <div
+        class="gallery-item"
+        *ngFor="let image of images; let i = index"
+        data-aos="zoom-in"
+        [attr.data-aos-delay]="(i % 6 + 1) * 100"
+        (click)="openImage(i)">
+
+        <img
+          [src]="'assets/images/gallery/' + image"
+          [alt]="image">
+
+        <div class="gallery-overlay">
+
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+
+          <span>Ampliar imagen</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ===========================
+            FOOTER
+    ============================ -->
+
+    <div
+      class="gallery-footer"
+      data-aos="fade-up">
+
+      <div class="gallery-info">
+
+        <div class="stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <h3>
+          Más de 17 publicaciones disponibles
+        </h3>
+
+        <p>
+          Nuestro compromiso es brindar un servicio seguro,
+          confiable y de calidad para todos nuestros pasajeros.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- ===========================
+          BOTÓN NUESTRA FLOTA
+    ============================ -->
+
+    <div
+      class="fleet-button"
+      data-aos="fade-up">
+
+      <button
+        type="button"
+        (click)="showFleet = !showFleet">
+
+        <i class="fa-solid fa-car-side"></i>
+
+        {{ showFleet ? 'Ocultar nuestra flota' : 'Conocer nuestra flota' }}
+
+        <i
+          class="fa-solid"
+          [class.fa-chevron-down]="!showFleet"
+          [class.fa-chevron-up]="showFleet">
+        </i>
+
+      </button>
+
+    </div>
+
+    <!-- ===========================
+            FLOTA
+    ============================ -->
+
+    @if(showFleet){
+
+    <section
+      class="fleet-section"
+      data-aos="fade-up">
+
+      <div class="fleet-header">
+
+        <span>
+
+          <i class="fa-solid fa-car"></i>
+
+          Nuestra Flota
+
+        </span>
+
+        <h2>
+
+          Vehículos modernos para cada viaje
+
+        </h2>
+
+        <p>
+
+          Contamos con unidades cómodas, seguras y en excelente estado para
+          garantizar una experiencia de viaje Premium.
+
+        </p>
+
+      </div>
+
+      <div class="fleet-grid">
+
+        <div
+          class="fleet-card"
+          *ngFor="let vehicle of vehicles">
+
+          <div
+            class="fleet-image"
+            (click)="openVehicle(vehicle.image)">
+
+            <img
+              [src]="'assets/images/fleet/' + vehicle.image"
+              [alt]="vehicle.name">
+
+            <div class="fleet-overlay">
+
+              <i class="fa-solid fa-expand"></i>
+
+              <span>Ver vehículo</span>
+
+            </div>
+
+          </div>
+
+          <div class="fleet-content">
+
+            <h3>
+
+              {{ vehicle.name }}
+
+            </h3>
+
+            <p>
+
+              {{ vehicle.description }}
+
+            </p>
+
+            <div class="fleet-features">
+
+              <span>
+
+                <i class="fa-solid fa-user-group"></i>
+
+                {{ vehicle.capacity }}
+
+              </span>
+
+              <span>
+
+                <i class="fa-solid fa-snowflake"></i>
+
+                A/C
+
+              </span>
+
+              <span>
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Seguro
+
+              </span>
+
+            </div>
+
+            <a
+              [href]="'https://wa.me/593984638664?text=Hola,%20quisiera%20conocer%20la%20disponibilidad%20del%20vehículo%20'+vehicle.name+'%20para%20un%20servicio%20de%20transporte.%20¿Podrían%20brindarme%20más%20información?'" 
+              target="_blank">
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+              Consultar disponibilidad
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    }
+
+  </div>
+
+</section>
+
+<!-- ===========================================
+                MODAL PREMIUM
+============================================ -->
+
+@if(selectedImage){
+
+<div
+  class="image-modal"
+  (click)="closeImage()">
+
+  <!-- Botón cerrar -->
+
+  <button
+    type="button"
+    class="close-button"
+    (click)="closeImage(); $event.stopPropagation()">
+
+    <i class="fa-solid fa-xmark"></i>
+
+  </button>
+
+  <!-- Flecha izquierda -->
+
+  <button
+    type="button"
+    class="nav-button prev"
+    (click)="previousImage(); $event.stopPropagation()">
+
+    <i class="fa-solid fa-chevron-left"></i>
+
+  </button>
+
+  <!-- Imagen -->
+
+  <div
+    class="modal-content"
+    (click)="$event.stopPropagation()">
+
+    <img
+      [src]="'assets/images/' + selectedFolder + '/' + selectedImage"
+      [alt]="selectedImage">
+
+  </div>
+
+  <!-- Flecha derecha -->
+
+  <button
+    type="button"
+    class="nav-button next"
+    (click)="nextImage(); $event.stopPropagation()">
+
+    <i class="fa-solid fa-chevron-right"></i>
+
+  </button>
+
+</div>
+
+}

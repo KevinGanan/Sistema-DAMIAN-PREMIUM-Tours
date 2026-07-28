@@ -1,0 +1,138 @@
+<nav class="navbar-custom">
+
+  <div class="container navbar-container">
+
+    <!-- Logo -->
+    <img
+      src="/assets/images/logo/logo6.png"
+      alt="Logo"
+      class="logo">
+
+
+    <!-- Botón hamburguesa -->
+    <button
+      class="menu-toggle"
+      (click)="toggleMenu()">
+
+      <i
+        class="fas"
+        [class.fa-bars]="!menuOpen"
+        [class.fa-times]="menuOpen">
+      </i>
+
+    </button>
+
+
+    <!-- Menú -->
+
+    <ul
+      class="menu"
+      [class.active]="menuOpen">
+
+      <li>
+
+        <a
+          href="#inicio"
+          (click)="closeMenu()">
+
+          Inicio
+
+        </a>
+
+      </li>
+
+      <li>
+
+        <a
+          href="#nosotros"
+          (click)="closeMenu()">
+
+          Nosotros
+
+        </a>
+
+      </li>
+
+      <li>
+
+        <a
+          href="#servicios"
+          (click)="closeMenu()">
+
+          Servicios
+
+        </a>
+
+      </li>
+
+      <li>
+
+        <a
+          href="#tarifas"
+          (click)="closeMenu()">
+
+          Tarifas
+
+        </a>
+
+      </li>
+
+      <li>
+
+        <a
+          href="#galeria"
+          (click)="closeMenu()">
+
+          Galería
+
+        </a>
+
+      </li>
+
+      <li>
+
+        <a
+          href="#contacto"
+          (click)="closeMenu()">
+
+          Contacto
+
+        </a>
+
+      </li>
+
+      <li class="mobile-whatsapp">
+
+        <a
+          class="btn-whatsapp"
+          href="https://wa.me/593984638664"
+          target="_blank">
+
+          <i class="fab fa-whatsapp whatsapp-icon"></i>
+
+          WhatsApp
+
+        </a>
+
+      </li>
+
+    </ul>
+
+
+
+    <!-- WhatsApp escritorio -->
+
+    <a
+      class="btn-whatsapp desktop-whatsapp"
+      href="https://wa.me/593984638664"
+      target="_blank">
+
+      <i class="fab fa-whatsapp whatsapp-icon"></i>
+
+      WhatsApp
+
+    </a>
+
+  </div>
+
+</nav>

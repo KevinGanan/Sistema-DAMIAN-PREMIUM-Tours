@@ -1,0 +1,96 @@
+<section
+id="destinos"
+class="destinations-section">
+
+<div class="container">
+
+<div
+class="section-header"
+data-aos="fade-up">
+
+<span>
+
+📍 DESTINOS
+
+</span>
+
+<h2>
+
+Llegamos a los principales destinos del Ecuador
+
+</h2>
+
+<p>
+
+Viaja con comodidad, seguridad y puntualidad hacia los destinos más importantes.
+
+</p>
+
+</div>
+
+
+<div class="destinations-grid">
+
+@for(destination of destinations; track destination.name; let i = $index){
+
+<div
+
+class="destination-card"
+
+data-aos="zoom-in-up"
+
+[attr.data-aos-delay]="i * 100">
+
+<div class="image">
+
+<img
+
+[src]="'assets/images/destinations/' + destination.image"
+
+[alt]="destination.name">
+
+<div class="overlay"></div>
+
+</div>
+
+<div class="content">
+
+<div class="icon">
+
+<i [class]="destination.icon"></i>
+
+</div>
+
+<h3>
+
+{{destination.name}}
+
+</h3>
+
+<p>
+
+{{destination.description}}
+
+</p>
+
+<a
+  href="javascript:void(0)"
+  (click)="consultarDestino(destination.name)">
+
+  Más información
+
+  <i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</div>
+
+}
+
+</div>
+
+</div>
+
+</section>

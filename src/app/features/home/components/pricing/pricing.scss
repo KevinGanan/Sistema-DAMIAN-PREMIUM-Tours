@@ -1,0 +1,488 @@
+.pricing-section{
+
+  padding:100px 0;
+
+  background:
+  linear-gradient(
+    180deg,
+    #f8fbff 0%,
+    #ffffff 100%
+  );
+
+}
+
+.container{
+
+  width:90%;
+  max-width:1250px;
+  margin:auto;
+
+}
+
+
+/*==========================
+      TÍTULO
+==========================*/
+
+.section-header{
+
+  text-align:center;
+
+  margin-bottom:70px;
+
+}
+
+
+.section-header span{
+
+  display:inline-block;
+
+  padding:8px 18px;
+
+  border-radius:30px;
+
+  background:#eaf7ff;
+
+  color:#0b5fa8;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  margin-bottom:15px;
+
+}
+
+
+.section-header h2{
+
+  font-size:42px;
+
+  color:#053e7a;
+
+  margin-bottom:15px;
+
+}
+
+
+.section-header p{
+
+  color:#6b7280;
+
+  font-size:18px;
+
+}
+
+
+
+/*==========================
+      CATEGORÍAS
+==========================*/
+
+.category{
+
+  margin-bottom:70px;
+
+}
+
+
+.category-title{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  margin-bottom:25px;
+
+}
+
+
+.category-title h3{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  font-size:28px;
+
+  color:#053e7a;
+
+}
+
+
+.category-title i{
+
+  color:#25D366;
+
+}
+
+
+
+/*==========================
+      SCROLL
+==========================*/
+
+.cards-slider{
+
+  display:flex;
+
+  gap:25px;
+
+  overflow-x:auto;
+
+  padding-bottom:15px;
+
+  scroll-behavior:smooth;
+
+}
+
+
+.cards-slider::-webkit-scrollbar{
+
+  height:8px;
+
+}
+
+
+.cards-slider::-webkit-scrollbar-thumb{
+
+  background:#8ecdf2;
+
+  border-radius:10px;
+
+}
+
+
+.cards-slider::-webkit-scrollbar-track{
+
+  background:#eef5fb;
+
+}
+
+
+
+/*==========================
+      TARJETAS
+==========================*/
+
+.price-card{
+
+  min-width:270px;
+
+  background:white;
+
+  border-radius:22px;
+
+  padding:30px;
+
+  box-shadow:
+
+  0 10px 30px rgba(0,0,0,.08);
+
+  transition:.35s;
+
+  border:1px solid #edf2f7;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+.price-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  top:0;
+
+  width:100%;
+
+  height:6px;
+
+  background:
+
+  linear-gradient(
+    90deg,
+    #25D366,
+    #29b6f6
+  );
+
+}
+
+
+.price-card:hover{
+
+  transform:
+
+  translateY(-12px);
+
+  box-shadow:
+
+  0 25px 45px rgba(5,62,122,.18);
+
+}
+
+
+.card-icon{
+
+  width:65px;
+
+  height:65px;
+
+  border-radius:50%;
+
+  background:
+
+  linear-gradient(
+    135deg,
+    #25D366,
+    #29b6f6
+  );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:white;
+
+  font-size:26px;
+
+  margin-bottom:25px;
+
+}
+
+
+.price-card h4{
+
+  color:#053e7a;
+
+  font-size:22px;
+
+  min-height:65px;
+
+  margin-bottom:20px;
+
+}
+
+
+.price{
+
+  font-size:48px;
+
+  font-weight:800;
+
+  color:#25D366;
+
+  margin-bottom:15px;
+
+}
+
+
+.price-card p{
+
+  color:#6b7280;
+
+  line-height:1.6;
+
+}
+
+
+
+/*==========================
+      INFORMACIÓN
+==========================*/
+
+.pricing-info{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:25px;
+
+  margin-top:30px;
+
+}
+
+
+.info-card{
+
+  background:white;
+
+  border-left:6px solid #25D366;
+
+  border-radius:15px;
+
+  padding:25px;
+
+  display:flex;
+
+  gap:18px;
+
+  align-items:flex-start;
+
+  box-shadow:
+
+  0 10px 25px rgba(0,0,0,.05);
+
+}
+
+
+.info-card i{
+
+  font-size:30px;
+
+  color:#25D366;
+
+}
+
+
+.info-card p{
+
+  margin:0;
+
+  color:#4b5563;
+
+  line-height:1.8;
+
+}
+
+
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+.section-header h2{
+
+font-size:34px;
+
+}
+
+
+.category-title h3{
+
+font-size:22px;
+
+}
+
+
+.pricing-info{
+
+grid-template-columns:1fr;
+
+}
+
+
+.price-card{
+
+min-width:240px;
+
+}
+
+}
+
+
+
+@media(max-width:600px){
+
+.pricing-section{
+
+padding:70px 0;
+
+}
+
+
+.section-header h2{
+
+font-size:28px;
+
+}
+
+
+.section-header p{
+
+font-size:16px;
+
+}
+
+
+.price{
+
+font-size:40px;
+
+}
+
+}
+
+/*==========================
+      TARJETAS INTERACTIVAS
+==========================*/
+
+
+.price-card.clickable{
+
+  cursor:pointer;
+
+}
+
+/* Botón visual WhatsApp */
+
+.whatsapp-action{
+
+
+  margin-top:20px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+
+  color:#25D366;
+
+  font-size:15px;
+
+  font-weight:700;
+
+
+  transition:.3s;
+
+
+}
+
+
+
+.whatsapp-action i{
+
+
+  font-size:22px;
+
+
+}
+
+
+
+.price-card:hover .whatsapp-action{
+
+
+  color:#128C7E;
+
+  transform:translateX(5px);
+
+
+}
