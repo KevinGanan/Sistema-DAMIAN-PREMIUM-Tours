@@ -2,9 +2,9 @@
 
 position:relative;
 
-height:100vh;
+min-height:100svh;
 
-min-height:650px;
+min-height:100vh;
 
 display:flex;
 
@@ -482,9 +482,8 @@ text-align:center;
 
 
 .hero-image{
-
-width:90%;
-
+    flex:1;
+    min-width:0;
 }
 
 
